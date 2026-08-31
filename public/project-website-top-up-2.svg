@@ -1,0 +1,31 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1d"/>
+      <stop offset="1" stop-color="#11172e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1080" height="630" rx="18" fill="#0d1224" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="60" y="60" width="1080" height="70" rx="18" fill="#0a0f20"/>
+  <circle cx="96" cy="95" r="8" fill="#ff5f56"/>
+  <circle cx="124" cy="95" r="8" fill="#ffbd2e"/>
+  <circle cx="152" cy="95" r="8" fill="#27c93f"/>
+  <rect x="200" y="86" width="360" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+  <rect x="120" y="190" width="260" height="430" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="170" cy="245" r="26" fill="url(#accent)"/>
+  <rect x="210" y="230" width="140" height="14" rx="7" fill="rgba(255,255,255,0.15)"/>
+  <rect x="150" y="300" width="200" height="12" rx="6" fill="rgba(255,255,255,0.10)"/>
+  <rect x="150" y="330" width="170" height="12" rx="6" fill="rgba(255,255,255,0.10)"/>
+  <rect x="430" y="190" width="320" height="120" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="430" y="330" width="320" height="120" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="790" y="190" width="290" height="260" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="460" y="225" width="180" height="16" rx="8" fill="url(#accent)"/>
+  <rect x="820" y="225" width="160" height="16" rx="8" fill="url(#accent)"/>
+  <text x="120" y="600" font-family="monospace" font-size="22" fill="#a855f7" letter-spacing="3">TOP UP WEB</text>
+  <text x="1080" y="600" text-anchor="end" font-family="sans-serif" font-size="26" font-weight="800" fill="#ffffff">Top Up Center — Mobile View</text>
+</svg>

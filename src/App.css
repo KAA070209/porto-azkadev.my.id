@@ -1,0 +1,18 @@
+/* App-level styles — minimal since most styles live in component CSS files */
+
+/* Smooth page-level transitions */
+main {
+  position: relative;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: var(--color-text-primary);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

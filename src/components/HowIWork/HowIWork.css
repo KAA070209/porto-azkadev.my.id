@@ -1,0 +1,131 @@
+/* ======= How I Work Section ======= */
+.how-i-work {
+  padding: var(--section-padding);
+  background: var(--color-bg-secondary);
+  position: relative;
+}
+
+.how-i-work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent) 50%,
+    transparent
+  );
+  opacity: 0.3;
+}
+
+.how-i-work-header {
+  margin-bottom: 20px;
+}
+
+.how-i-work-intro {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+
+.how-i-work-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.how-i-work-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.how-i-work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.how-i-work-image:hover img {
+  transform: scale(1.05);
+}
+
+.how-i-work-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+.how-i-work-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.step-item:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateX(8px);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-gradient);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.step-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .how-i-work-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .step-item:hover {
+    transform: translateX(0) translateY(-4px);
+  }
+}
