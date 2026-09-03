@@ -2,19 +2,19 @@ export const projectsData = [
   {
     id: 'lapor-ob',
     projectNumber: 'PROJECT_01',
-    category: 'mobile',
+    category: 'mobile & Website Desktop',
     title: 'Lapor OB',
     subtitle: 'An application to streamline centralized reporting and task requests to the Office Boy.',
     description:
       'An integrated reporting and task management system for Office Boy operations, featuring a mobile application for employees and Office Boy staff, along with a web-based dashboard for Admin and HR to manage tasks, monitor reports, track work status, and access activity history centrally.',
-    image: '/project-lapor-ob-1.svg',
+    image: '/project-lapor-ob.png',
     role: 'Full Stack Developer',
     year: '2024',
     client: 'Internal / Corporate',
     gallery: [
-      '/project-lapor-ob-1.svg',
-      '/project-lapor-ob-2.svg',
-      '/project-lapor-ob-3.svg',
+      '/project-lapor-ob.png',
+      '/project-lapor-ob-2.png',
+      '/project-lapor-ob-3.png',
     ],
     demoUrl: '#',
     sourceUrl: '#',
@@ -74,7 +74,7 @@ export const projectsData = [
   {
     id: 'e-commerce-bumikriya',
     projectNumber: 'PROJECT_02',
-    category: 'web',
+    category: 'website',
     title: 'E-Commerce BumiKriya',
     subtitle: 'A modern e-commerce platform for fast and efficient trading of craft raw materials.',
     description:
@@ -223,14 +223,14 @@ async def create_order(
   subtitle: 'A digital documentation gallery and activity archive system for the Youth Red Cross organization.',
   description:
     'A digital gallery platform designed to organize, preserve, and showcase Youth Red Cross activities and organizational documentation.',
-    image: '/project-website-album-pmr-1.svg',
+    image: '/project-website-album-pmr.png',
     role: 'Frontend Developer',
     year: '2024',
     client: 'PMR SMKN 2 Cimahi',
     gallery: [
-      '/project-website-album-pmr-1.svg',
-      '/project-website-album-pmr-2.svg',
-      '/project-website-album-pmr-3.svg',
+      '/project-website-album-pmr-1.png',
+      '/project-website-album-pmr-2.png',
+      '/project-website-album-pmr-3.png',
     ],
     demoUrl: 'https://pmrsmkn2cimahi.my.id/galeri',
   sourceUrl: '#',
