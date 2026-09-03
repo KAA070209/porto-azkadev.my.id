@@ -85,7 +85,7 @@ export const projectsData = [
       '/project-bumikriya-2.png',
       '/project-bumikriya-3.png',
     ],
-    demoUrl: '#',
+    demoUrl: 'https://bumikriya.azkadev.my.id/',
     sourceUrl: '#',
     challenge:
       'The transition from conventional craft raw material transactions to a digital ecosystem was often hindered by complicated catalog navigation and slow checkout processes.\n\nA reliable, fast, and responsive web system with real-time inventory management and a smooth shopping experience was needed.',
