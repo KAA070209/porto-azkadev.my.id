@@ -129,3 +129,32 @@
     transform: translateX(0) translateY(-4px);
   }
 }
+
+@media (max-width: 480px) {
+  .how-i-work-intro {
+    font-size: 0.85rem;
+    margin-bottom: 32px;
+  }
+
+  .step-item {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .step-content p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+}

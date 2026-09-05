@@ -79,7 +79,31 @@
 
 @media (max-width: 480px) {
   .journey-item {
-    gap: 14px;
-    padding: 16px;
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  .journey-item-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .journey-item-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .journey-item:not(:last-child)::after {
+    left: 37px;
+    top: 50px;
+  }
+
+  .journey-item-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .journey-item-content p {
+    font-size: 0.8rem;
   }
 }

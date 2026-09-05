@@ -308,12 +308,18 @@
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
   }
 
   .hero-buttons {
@@ -325,23 +331,115 @@
   .btn-secondary {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
 
   .hero-photo-wrapper {
-    width: 240px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
+    border-radius: 16px;
   }
 
   .hero-right {
-    gap: 12px;
+    gap: 10px;
   }
 
   .hero-stat-card {
-    min-width: 130px;
-    padding: 16px;
+    min-width: 110px;
+    padding: 14px;
   }
 
   .stat-number {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .hero-experience-badge {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .experience-number {
+    font-size: 1.2rem;
+  }
+
+  .experience-text {
+    font-size: 0.65rem;
+    max-width: 60px;
+  }
+
+  .experience-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .experience-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-photo-wrapper {
+    width: 160px;
+    height: 200px;
+  }
+
+  .hero-right {
+    gap: 8px;
+  }
+
+  .hero-stat-card {
+    min-width: 100px;
+    padding: 12px;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .stat-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .stat-number {
+    font-size: 1.15rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .hero-center {
+    margin: 10px 0;
   }
 }

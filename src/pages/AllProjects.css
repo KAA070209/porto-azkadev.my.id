@@ -123,9 +123,36 @@
 @media (max-width: 600px) {
   .all-projects-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .all-projects {
     padding: 100px 0 60px;
+  }
+
+  .all-projects-title {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+
+  .all-projects-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .all-project-info {
+    padding: 14px;
+  }
+
+  .all-project-title {
+    font-size: 0.95rem;
+  }
+
+  .all-project-category {
+    font-size: 0.8rem;
+  }
+
+  .all-project-tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
   }
 }

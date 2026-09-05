@@ -207,5 +207,18 @@ button {
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  :root {
+    --section-padding: 48px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-divider {
+    margin-bottom: 32px;
   }
 }

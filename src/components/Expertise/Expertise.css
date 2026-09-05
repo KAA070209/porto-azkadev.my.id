@@ -101,5 +101,30 @@
 @media (max-width: 480px) {
   .expertise-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .expertise-card {
+    padding: 24px 20px;
+  }
+
+  .expertise-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+
+  .expertise-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .expertise-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .expertise-card p {
+    font-size: 0.8rem;
   }
 }

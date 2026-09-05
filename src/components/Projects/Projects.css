@@ -116,13 +116,35 @@
 }
 
 @media (max-width: 600px) {
+  .featured-projects {
+    padding: 60px 0;
+  }
+
   .featured-projects-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .featured-projects-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .featured-projects-title {
+    font-size: 1.6rem;
+  }
+
+  .featured-project-info {
+    padding: 12px 14px;
+  }
+
+  .featured-project-title {
+    font-size: 0.85rem;
+  }
+
+  .featured-project-category {
+    font-size: 0.75rem;
   }
 }
