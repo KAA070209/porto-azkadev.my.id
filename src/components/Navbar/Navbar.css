@@ -115,6 +115,10 @@
   height: 14px;
 }
 
+.navbar-cv-btn-mobile {
+  display: none;
+}
+
 /* Mobile Menu Toggle */
 .navbar-toggle {
   display: none;
