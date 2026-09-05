@@ -30,7 +30,7 @@ export default function ProjectsPage() {
                 <h3 className="all-project-title">{project.title}</h3>
                 <p className="all-project-category">{project.subtitle}</p>
                 <div className="all-project-tags">
-                  {project.tags.slice(0, 3).map((tag) => (
+                  {project.tags.map((tag) => (
                     <span className="all-project-tag" key={tag}>{tag}</span>
                   ))}
                 </div>
