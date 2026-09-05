@@ -294,58 +294,10 @@ def classify_waste(image_path):
 };`
     }
   },
-  {
-    id: 'website-top-up',
-    projectNumber: 'PROJECT_06',
-    category: 'Digital Transaction Platform',
-    title: 'Website Top Up',
-    subtitle: 'An instant game top-up and digital voucher transaction platform.',
-    description:
-      'A fast and reliable web platform for purchasing game currency, digital vouchers, and in-game items. The system features instant automated delivery after payment confirmation, support for multiple payment methods via Midtrans integration, and a real-time order tracking interface — designed to deliver vouchers in seconds rather than minutes.',
-    image: '/project-website-top-up-1.svg',
-    role: 'Full Stack Developer',
-    year: '2025',
-    client: 'Gaming Startup',
-    gallery: [
-      '/project-website-top-up-1.svg',
-      '/project-website-top-up-2.svg',
-      '/project-website-top-up-3.svg',
-    ],
-    demoUrl: '#',
-    sourceUrl: '#',
-    challenge:
-      'Game voucher transactions demanded extreme speed and reliability — players purchasing in-game currency expect instant delivery, and any delay directly impacts their gaming experience. Traditional top-up methods involved manual verification by staff, causing delays of minutes to hours. Payment failures were common with no automated retry mechanism, leading to customer complaints and lost revenue.\n\nThe platform needed fully automated payment verification and instant voucher delivery with zero manual intervention, while supporting high concurrent transaction volumes during peak gaming hours.',
-    solution:
-      'I engineered a Next.js application with TypeScript for type-safe, performant frontend rendering, Prisma ORM for efficient database operations, and Midtrans payment gateway for automated transaction processing. The system uses webhook-based payment confirmation — when Midtrans confirms a successful payment, the system instantly triggers voucher delivery without any human intervention, achieving sub-5-second end-to-end processing.',
-    coreFeatures: [
-      {
-        title: 'Instant Voucher Delivery',
-        description: 'Automated voucher and game currency delivery within seconds of payment confirmation — no manual verification required, supporting high-volume concurrent orders.',
-      },
-      {
-        title: 'Multi-Method Payment',
-        description: 'Seamless payment integration via Midtrans supporting QRIS, e-wallets (GoPay, OVO, Dana), bank transfers, and credit/debit cards with automatic reconciliation.',
-      },
-    ],
-    results: [
-      { value: '99.9%', label: 'SUCCESS RATE' },
-      { value: '<5s', label: 'DELIVERY TIME' },
-      { value: '24/7', label: 'AUTOMATED' },
-    ],
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'Midtrans'],
-    codeSnippet: {
-      filename: 'payment.ts',
-      code: `export async function handleWebhook(payload: WebhookPayload) {
-  const status = await midtrans.verify(payload);
-  if (status.isSuccess) {
-    await processVoucherDelivery(payload.orderId);
-  }
-}`
-    }
-  },
+  
   {
     id: 'website-logistik',
-    projectNumber: 'PROJECT_07',
+    projectNumber: 'PROJECT_06',
     category: 'Logistics & Tracking',
     title: 'Website Logistik Distribusi Barang',
     subtitle: 'A cargo tracking and delivery management system with real-time map visualization.',
@@ -396,57 +348,6 @@ def geocode_address(address):
     if data:
         return {"lat": float(data[0]["lat"]), "lon": float(data[0]["lon"])}
     return None`
-    }
-  },
-  {
-    id: 'website-organization',
-    projectNumber: 'PROJECT_08',
-    category: 'Organization Portal',
-    title: 'Website Organization',
-    subtitle: 'A profile portal and information hub for student organization activities.',
-    description:
-      'A modern, responsive web portal serving as the official digital presence for a student organization. The platform consolidates organization profiles, event announcements, news articles, and online registration into a single, fast-loading interface — replacing the previous fragmented communication across social media and messaging apps.',
-    image: '/project-website-organization-1.svg',
-    role: 'Frontend Developer',
-    year: '2023',
-    client: 'Student Organization',
-    gallery: [
-      '/project-website-organization-1.svg',
-      '/project-website-organization-2.svg',
-      '/project-website-organization-3.svg',
-    ],
-    demoUrl: '#',
-    sourceUrl: '#',
-    challenge:
-      'Organization announcements and event information were posted across multiple scattered channels — Instagram stories, WhatsApp group messages, and verbal announcements during meetings. This made it difficult for members to find information later, resulted in low event participation due to missed announcements, and created an inconsistent and unprofessional public image for the organization.\n\nThe organization needed a centralized, professional-looking web portal that could serve as a single source of truth for all activities, news, and events.',
-    solution:
-      'I developed a high-performance single-page application using React.js with Vite as the build tool and Tailwind CSS for rapid, consistent styling. The portal features dedicated sections for organization profile, event listings with online registration forms, news articles, and an announcement feed — all optimized for fast loading and full responsiveness across devices.',
-    coreFeatures: [
-      {
-        title: 'Event Registration System',
-        description: 'Online event registration forms with participant capacity limits, automatic confirmation messages, and e-ticket generation for registered attendees.',
-      },
-      {
-        title: 'News & Announcements CMS',
-        description: 'A lightweight content management section for publishing articles, official announcements, and activity reports with formatted text and image support.',
-      },
-    ],
-    results: [
-      { value: '5,000+', label: 'PAGE VISITORS' },
-      { value: '100%', label: 'MOBILE RESPONSIVE' },
-      { value: '0.8s', label: 'FULL LOAD TIME' },
-    ],
-    tags: ['React.js', 'Tailwind CSS', 'Vite'],
-    codeSnippet: {
-      filename: 'events.jsx',
-      code: `export function EventCard({ title, date, location }) {
-  return (
-    <div className="event-card">
-      <h3>{title}</h3>
-      <p>{date} • {location}</p>
-    </div>
-  );
-}`
     }
   }
 ];
