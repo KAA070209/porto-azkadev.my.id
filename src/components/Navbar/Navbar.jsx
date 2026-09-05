@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import CVPreviewModal from './CVPreviewModal';
 import './Navbar.css';
 
 const navLinks = [
@@ -15,8 +16,18 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('');
+  const [cvModalOpen, setCvModalOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleCvClick = useCallback((e) => {
+    e.preventDefault();
+    setCvModalOpen(true);
+  }, []);
+
+  const handleCloseCvModal = useCallback(() => {
+    setCvModalOpen(false);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -143,12 +154,9 @@ export default function Navbar() {
         </div>
 
         <a
-          href="#"
+          href="/cv.pdf"
           className="navbar-cv-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            window.open('#', '_blank');
-          }}
+          onClick={handleCvClick}
         >
           Download CV
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -158,6 +166,7 @@ export default function Navbar() {
           </svg>
         </a>
       </div>
+      <CVPreviewModal isOpen={cvModalOpen} onClose={handleCloseCvModal} />
     </nav>
   );
 }
