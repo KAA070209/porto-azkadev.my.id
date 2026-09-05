@@ -197,8 +197,7 @@ async def create_order(
       'A community-oriented web platform that digitizes the waste bank workflow with AI-powered waste detection. The system integrates Roboflow AI to automatically classify waste types from photos, enabling faster and more accurate deposit processing. Features include digital savings balance tracking, automatic price calculation based on waste type and weight, and analytics dashboards for monitoring environmental impact and community participation.',
     image: '/project-website-bank-sampah-1.png',
     role: 'Full Stack Developer',
-    year: '2023',
-    client: 'Community Organization',
+    year: '2025',
     gallery: [
       '/project-website-bank-sampah.png',
       '/project-website-bank-sampah-2.png',
