@@ -29,6 +29,17 @@ export default function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
     if (location.pathname !== '/') {
       setActiveHash('');
       return;
@@ -99,8 +110,19 @@ export default function Navbar() {
 
         <div
           className={`navbar-toggle ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMenuOpen(!menuOpen);
+          }}
+          role="button"
+          tabIndex={0}
           aria-label="Toggle menu"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setMenuOpen(!menuOpen);
+            }
+          }}
         >
           <span></span>
           <span></span>
@@ -108,6 +130,16 @@ export default function Navbar() {
         </div>
 
         <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+          <button
+            className="navbar-close-btn"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
           {navLinks.map((link) => (
             <Link
               key={link.label}
