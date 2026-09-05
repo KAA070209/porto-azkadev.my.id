@@ -4,7 +4,7 @@ import './Footer.css';
 const socials = [
   { label: 'GitHub', href: 'https://github.com/KAA070209' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammad-azka-saadi-nabhan-678156385/' },
-  { label: 'Twitter', href: 'https://twitter.com' },
+  { label: 'Instagram', href: 'https://instagram.com/kaa_nbhn' },
   { label: 'Email', href: 'mailto:m.azkanabhan07@gmail.com' },
 ];
 
