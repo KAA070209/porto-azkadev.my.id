@@ -181,6 +181,13 @@
   .navbar-links a {
     font-size: 1rem;
   }
+
+  .navbar-cv-btn-mobile {
+    display: inline-flex !important;
+    margin-top: 12px;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
 }
 
 @media (max-width: 480px) {
