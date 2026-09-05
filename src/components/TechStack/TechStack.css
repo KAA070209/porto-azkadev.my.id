@@ -1,142 +1,212 @@
-/* ======= Technical Stack Section ======= */
-.tech-stack {
-  padding: var(--section-padding);
-  background: var(--color-bg-secondary);
+/* ======= Tech Stack Bar ======= */
+.tech-stack-bar {
+  padding: 0;
+  background: var(--color-bg-primary);
   position: relative;
+  margin-top: -20px;
+  overflow: hidden;
 }
 
-.tech-stack::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-accent) 50%,
-    transparent
-  );
-  opacity: 0.3;
-}
-
-.tech-stack-header {
-  margin-bottom: 50px;
-}
-
-.tech-stack-header .section-title {
+.tech-stack-inner {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.tech-stack-header .section-title .header-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: var(--color-accent-glow);
-  border-radius: var(--radius-sm);
-}
-
-.tech-stack-header .section-title .header-icon svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-accent);
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.tech-card {
+  gap: 0;
+  padding: 18px 0;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  text-align: center;
-  transition: all var(--transition-base);
-  position: relative;
+  border-radius: 16px;
   overflow: hidden;
-  cursor: default;
-}
-
-.tech-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 50% 0%,
-    rgba(0, 212, 255, 0.06) 0%,
-    transparent 60%
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
   );
-  opacity: 0;
-  transition: opacity var(--transition-base);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
-.tech-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-card-hover);
+.tech-stack-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 24px 0 28px;
+  position: relative;
+  z-index: 3;
+  background: var(--color-bg-card);
+  border-right: 1px solid var(--color-border);
+  margin-right: 0;
 }
 
-.tech-card:hover::before {
-  opacity: 1;
+.tech-stack-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: scrollTech 40s linear infinite;
+  flex-shrink: 0;
+  padding-left: 14px;
 }
 
-.tech-card-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 16px;
+.tech-stack-track:hover {
+  animation-play-state: paused;
+}
+
+.tech-stack-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.tech-stack-item:hover {
+  background: var(--color-accent-glow);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+}
+
+.tech-stack-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-accent-glow);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-base);
-  position: relative;
-  z-index: 1;
-}
-
-.tech-card:hover .tech-card-icon {
-  background: var(--color-accent-glow-strong);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
-}
-
-.tech-card-icon svg {
   width: 28px;
   height: 28px;
-  color: var(--color-accent);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.tech-card h3 {
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-  position: relative;
-  z-index: 1;
-  line-height: 1.4;
+.tech-stack-item:hover .tech-stack-icon {
+  transform: scale(1.15);
 }
 
-@media (max-width: 900px) {
-  .tech-grid {
-    grid-template-columns: repeat(3, 1fr);
+.tech-stack-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tech-stack-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* ============================================
+   Brand colors — each item gets its own color
+   ============================================ */
+/* 1. Next.js — white */
+.tech-stack-item[data-tech="nextjs"] .tech-stack-icon,
+.tech-stack-item[data-tech="nextjs"] .tech-stack-name { color: #ffffff; }
+
+/* 2. React — cyan */
+.tech-stack-item[data-tech="react"] .tech-stack-icon,
+.tech-stack-item[data-tech="react"] .tech-stack-name { color: #61dafb; }
+
+/* 3. TypeScript — blue */
+.tech-stack-item[data-tech="typescript"] .tech-stack-icon,
+.tech-stack-item[data-tech="typescript"] .tech-stack-name { color: #3178c6; }
+
+/* 4. Node.js — green */
+.tech-stack-item[data-tech="nodejs"] .tech-stack-icon,
+.tech-stack-item[data-tech="nodejs"] .tech-stack-name { color: #3c873a; }
+
+/* 5. Python — blue */
+.tech-stack-item[data-tech="python"] .tech-stack-icon,
+.tech-stack-item[data-tech="python"] .tech-stack-name { color: #3776ab; }
+
+/* 6. Flutter — blue */
+.tech-stack-item[data-tech="flutter"] .tech-stack-icon,
+.tech-stack-item[data-tech="flutter"] .tech-stack-name { color: #02569b; }
+
+/* 7. PostgreSQL — blue */
+.tech-stack-item[data-tech="postgresql"] .tech-stack-icon,
+.tech-stack-item[data-tech="postgresql"] .tech-stack-name { color: #336791; }
+
+/* 8. REST API — green */
+.tech-stack-item[data-tech="restapi"] .tech-stack-icon,
+.tech-stack-item[data-tech="restapi"] .tech-stack-name { color: #6cc24a; }
+
+/* 9. Tailwind CSS — cyan */
+.tech-stack-item[data-tech="tailwind"] .tech-stack-icon,
+.tech-stack-item[data-tech="tailwind"] .tech-stack-name { color: #06b6d4; }
+
+/* 10. Git — orange-red */
+.tech-stack-item[data-tech="git"] .tech-stack-icon,
+.tech-stack-item[data-tech="git"] .tech-stack-name { color: #f05032; }
+
+/* 11. Docker — blue */
+.tech-stack-item[data-tech="docker"] .tech-stack-icon,
+.tech-stack-item[data-tech="docker"] .tech-stack-name { color: #2496ed; }
+
+/* 12. SEO — blue */
+.tech-stack-item[data-tech="seo"] .tech-stack-icon,
+.tech-stack-item[data-tech="seo"] .tech-stack-name { color: #4285f4; }
+
+/* 13. Swagger —green */
+.tech-stack-item[data-tech="swagger"] .tech-stack-icon,
+.tech-stack-item[data-tech="swagger"] .tech-stack-name { color: #85ea2d; }
+
+/* 14. ngrok — purple */
+.tech-stack-item[data-tech="ngrok"] .tech-stack-icon,
+.tech-stack-item[data-tech="ngrok"] .tech-stack-name { color: #6d44cb; }
+
+/* 15. FastAPI — green */
+.tech-stack-item[data-tech="fastapi"] .tech-stack-icon,
+.tech-stack-item[data-tech="fastapi"] .tech-stack-name { color: #009688; }
+
+/* 16. PHP — purple */
+.tech-stack-item[data-tech="php"] .tech-stack-icon,
+.tech-stack-item[data-tech="php"] .tech-stack-name { color: #777bb4; }
+
+/* 17. Laravel — red */
+.tech-stack-item[data-tech="laravel"] .tech-stack-icon,
+.tech-stack-item[data-tech="laravel"] .tech-stack-name { color: #ff2d20; }
+
+.tech-stack-item:hover .tech-stack-icon,
+.tech-stack-item:hover .tech-stack-name {
+  color: var(--color-accent) !important;
+}
+
+@keyframes scrollTech {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 600px) {
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+@media (max-width: 768px) {
+  .tech-stack-label {
+    font-size: 0.85rem;
+    padding: 0 16px;
   }
 
-  .tech-card {
-    padding: 24px 16px;
+  .tech-stack-item {
+    gap: 6px;
+    padding: 8px 14px;
+  }
+
+  .tech-stack-name {
+    font-size: 0.8rem;
+  }
+
+  .tech-stack-track {
+    gap: 10px;
   }
 }

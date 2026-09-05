@@ -1,0 +1,131 @@
+/* ======= All Projects Page ======= */
+.all-projects {
+  padding: 120px 0 80px;
+  background: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.all-projects-header {
+  margin-bottom: 48px;
+}
+
+.all-projects-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.all-projects-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.all-projects-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+}
+
+.all-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.all-project-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.all-project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.all-project-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #070a14;
+  overflow: hidden;
+}
+
+.all-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.all-project-card:hover .all-project-image img {
+  transform: scale(1.05);
+}
+
+.all-project-info {
+  padding: 20px;
+}
+
+.all-project-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.all-project-category {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.all-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.all-project-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .all-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .all-projects-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .all-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .all-projects {
+    padding: 100px 0 60px;
+  }
+}

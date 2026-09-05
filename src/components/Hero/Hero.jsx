@@ -1,62 +1,176 @@
-import Typewriter from '../Typewriter/Typewriter';
+import { Link } from 'react-router-dom';
 import './Hero.css';
-
-const ROLES = ['Software Developer', 'Frontend Engineer', 'Backend Engineer', 'Full Stack Developer', 'Mobile App Developer', 'Optimization & SEO Specialist', 'UI/UX Designer'];
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero-bg">
-        <img src="/hero-bg.jpg" alt="Futuristic cityscape background" />
-        <div className="hero-bg-overlay"></div>
-      </div>
+      <div className="container hero-container">
 
-      <div className="hero-particles">
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-      </div>
+        {/* Left Content */}
+        <div className="hero-left">
+          <div className="hero-badge">
+            <span className="hero-badge-dot"></span>
+            Available for Freelance Projects
+          </div>
 
-      <div className="container hero-content">
-        <div className="hero-badge">
-          <span className="hero-badge-dot"></span>
-          Available for freelance work
+          <h1 className="hero-title">
+            Turning your ideas into{' '}
+            <span className="hero-highlight">
+              digital products.
+            </span>
+          </h1>
+
+          <p className="hero-description">
+            I design and develop modern websites, web applications,
+            and mobile apps that are fast, responsive, and built
+            around your business goals.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="btn-primary">
+              <span>View My Work</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+
+            <Link to="/contact" className="btn-secondary">
+              <span>Start a Project</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
-        <p className="hero-greeting">Hi there! 👋</p>
+        {/* Center Profile */}
+        <div className="hero-center">
+          <div className="hero-photo-wrapper">
+            <img
+              src="/profile.png"
+              alt="Muhammad Azka Sa'adi Nabhan, Software Developer"
+              className="hero-photo"
+            />
 
-        <h1 className="hero-title">
-          <span className="name typing-reveal" style={{ animationDelay: '0.2s' }}>
-            I'm Muhammad Azka
-          </span>
-          <span className="role typing-reveal" style={{ animationDelay: '0.4s' }}>
-            <Typewriter words={ROLES} />
-          </span>
-        </h1>
+            <div className="hero-experience-badge">
+              <span className="experience-number">2+</span>
 
-        <p className="hero-description">
-          Crafting elegant, high-performance digital solutions. Passionate about
-          building seamless experiences across web and mobile platforms with
-          modern technologies and clean code.
-        </p>
+              <span className="experience-text">
+                Years
+                <br />
+                Experience
+              </span>
 
-        <div className="hero-buttons">
-          <a href="#expertise" className="btn-primary">
-            <span>See My Work</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="#contact" className="btn-secondary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-            <span>Let's Talk</span>
-          </a>
+              <div className="experience-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Stats */}
+        <div className="hero-right">
+
+          {/* Web & Mobile */}
+          <div className="hero-stat-card">
+            <div className="stat-icon stat-icon-check">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+
+            <span className="stat-number">Web</span>
+            <span className="stat-label">Development</span>
+          </div>
+
+          {/* Backend */}
+          <div className="hero-stat-card">
+            <div className="stat-icon stat-icon-users">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v7c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                <path d="M3 12v7c0 1.66 4.03 3 9 3s9-1.34 9-3v-7" />
+              </svg>
+            </div>
+
+            <span className="stat-number">API</span>
+            <span className="stat-label">Backend Development</span>
+          </div>
+
+          {/* Mobile */}
+          <div className="hero-stat-card">
+            <div className="stat-icon stat-icon-star">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            </div>
+
+            <span className="stat-number">Mobile</span>
+            <span className="stat-label">App Development</span>
+          </div>
+
         </div>
       </div>
     </section>

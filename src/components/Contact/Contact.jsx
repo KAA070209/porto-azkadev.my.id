@@ -58,8 +58,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    alert('Message sent! (Demo)');
+    const phone = '6281285554702';
+    const text = `Halo, saya ${formData.name}%0AEmail: ${formData.email}%0APesan: ${formData.message}`;
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
     setFormData({ name: '', email: '', message: '' });
   };
 

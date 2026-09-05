@@ -1,12 +1,12 @@
 import './About.css';
 
 const tags = [
-  'Frontend Development',
-  'Backend Development',
+  'Web Development',
   'Mobile Development',
+  'Backend Development',
   'Full Stack Development',
-  'Optimization SEO',
-  'UI/UX Design',
+  'API Development',
+  'SEO Optimization',
 ];
 
 export default function About() {
@@ -16,9 +16,10 @@ export default function About() {
         {/* Hero Header */}
         <div className="about-hero animate-on-scroll">
           <h2 className="about-hero-title">
-            <span className="line-white">Developer.</span>
+            <span className="line-white">Software Developer.</span>
             <span className="line-gradient">Problem Solver.</span>
           </h2>
+
           <div className="about-hero-divider"></div>
         </div>
 
@@ -28,19 +29,26 @@ export default function About() {
             <h2>About Me</h2>
 
             <p>
-              I am a software developer with a strong interest in building modern,
-              responsive, and functional digital applications. I enjoy transforming
-              ideas into web and mobile applications that provide useful and
-              seamless experiences for users.
+              I am a software developer focused on building modern,
+              responsive, and scalable digital applications. I enjoy
+              turning ideas and real-world problems into reliable
+              software solutions with clean and maintainable code.
             </p>
 
             <p>
-              My experience includes frontend development with HTML, CSS,
-              JavaScript, TypeScript, React.js, and Next.js, as well as backend
-              development using Node.js, Python, FastAPI, and PostgreSQL. I also
-              develop cross-platform mobile applications using Flutter and work
-              with development tools such as Git and Docker to support efficient
-              software development workflows.
+              My experience covers web, mobile, and backend development.
+              I work with technologies such as React.js, Next.js,
+              TypeScript, Node.js, Python, FastAPI, Flutter, and
+              PostgreSQL. I also work with REST APIs, Git, Docker,
+              and modern development workflows to build and maintain
+              efficient applications.
+            </p>
+
+            <p>
+              Beyond development, I pay attention to performance,
+              responsive design, SEO, and user experience to ensure
+              that the applications I build are not only functional,
+              but also accessible and effective for users.
             </p>
 
             <div className="philosophy-tags">
@@ -54,7 +62,10 @@ export default function About() {
 
           <div className="profile-card">
             <div className="profile-image-wrapper">
-              <img src="/profile.png" alt="Muhammad Azka Sa'adi Nabhan" />
+              <img
+                src="/profile.png"
+                alt="Muhammad Azka Sa'adi Nabhan - Software Developer"
+              />
             </div>
 
             <div className="profile-info">
@@ -65,8 +76,13 @@ export default function About() {
 
               <h3>
                 Muhammad Azka
+            
                 Sa'adi Nabhan
               </h3>
+
+              <span className="profile-role">
+                Software Developer
+              </span>
             </div>
           </div>
         </div>

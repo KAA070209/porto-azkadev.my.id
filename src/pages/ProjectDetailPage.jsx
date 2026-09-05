@@ -10,13 +10,7 @@ export default function ProjectDetailPage() {
   const [previewImage, setPreviewImage] = useState(null);
 
   const handleDiscussClick = () => {
-    navigate('/about');
-    setTimeout(() => {
-      const contactEl = document.querySelector('#contact');
-      if (contactEl) {
-        contactEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 300);
+    navigate('/contact');
   };
 
   useEffect(() => {

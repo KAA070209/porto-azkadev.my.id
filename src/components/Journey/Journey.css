@@ -27,7 +27,7 @@
 }
 
 .journey-item:hover {
-  background: rgba(0, 212, 255, 0.04);
+  background: rgba(59, 130, 246, 0.04);
 }
 
 .journey-item-icon {
@@ -59,8 +59,8 @@
   width: 2px;
   background: linear-gradient(
     to bottom,
-    rgba(0, 212, 255, 0.3),
-    rgba(0, 212, 255, 0.05)
+    rgba(59, 130, 246, 0.3),
+    rgba(59, 130, 246, 0.05)
   );
 }
 

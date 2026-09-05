@@ -13,14 +13,14 @@
   --color-text-secondary: #8a8fb5;
   --color-text-muted: #5c6190;
 
-  --color-accent: #00d4ff;
-  --color-accent-alt: #7c4dff;
-  --color-accent-gradient: linear-gradient(135deg, #00d4ff 0%, #7c4dff 100%);
-  --color-accent-glow: rgba(0, 212, 255, 0.15);
-  --color-accent-glow-strong: rgba(0, 212, 255, 0.3);
+  --color-accent: #3b82f6;
+  --color-accent-alt: #60a5fa;
+  --color-accent-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  --color-accent-glow-strong: rgba(59, 130, 246, 0.3);
 
   --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-hover: rgba(0, 212, 255, 0.3);
+  --color-border-hover: rgba(59, 130, 246, 0.3);
 
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -39,8 +39,8 @@
 
   /* Shadows */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 8px 40px rgba(0, 212, 255, 0.1);
-  --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.15);
+  --shadow-card-hover: 0 8px 40px rgba(59, 130, 246, 0.1);
+  --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.15);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);

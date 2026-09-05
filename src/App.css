@@ -7,7 +7,7 @@ main {
 
 /* Selection styling */
 ::selection {
-  background: rgba(0, 212, 255, 0.3);
+  background: rgba(59, 130, 246, 0.3);
   color: var(--color-text-primary);
 }
 
