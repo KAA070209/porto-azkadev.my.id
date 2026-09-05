@@ -41,7 +41,7 @@ export default function Projects() {
               </div>
               <div className="featured-project-info">
                 <h3 className="featured-project-title">{project.title}</h3>
-                <p className="featured-project-category">Web Application</p>
+                <p className="featured-project-category">Website & Web Application</p>
               </div>
             </div>
           ))}
