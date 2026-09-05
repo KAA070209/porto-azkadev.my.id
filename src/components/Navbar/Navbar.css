@@ -171,6 +171,7 @@
     transition: right var(--transition-base);
     border-left: 1px solid var(--color-border);
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }
 
   .navbar-links.open {
