@@ -16,7 +16,7 @@ export const projectsData = [
       '/project-lapor-ob-2.png',
       '/project-lapor-ob-3.png',
     ],
-    demoUrl: '#',
+    demoUrl: '/contact',
     sourceUrl: '#',
     challenge:
       'Previously, employees reported issues or requested assistance from the Office Boy through unstructured WhatsApp messages or face-to-face communication. This manual process led to frequent miscommunication, lost reports, duplicated requests, and zero visibility into task progress. There was no accountability trail, making it impossible for management to evaluate team performance or identify recurring issues.\n\nThe organization needed a centralized, trackable, and mobile-friendly solution to replace the fragmented communication workflow while maintaining ease of use for non-technical staff.',
@@ -49,7 +49,7 @@ export const projectsData = [
       { value: '100%', label: 'REPORT VISIBILITY' },
       { value: '3x', label: 'PRODUCTIVITY GAIN' },
     ],
-    tags: ['Flutter', 'Node.js', 'TypeScript', 'PostgreSQL'],
+    tags: ['Flutter', 'Node.js', 'TypeScript','Prisma', 'Swagger', 'REST Api', 'PostgreSQL'],
     codeSnippet: {
       filename: 'report.controller.ts',
       code: `export const createReport = async (req: Request, res: Response) => {
@@ -192,28 +192,32 @@ async def create_order(
     projectNumber: 'PROJECT_04',
     category: 'Community Waste Management',
     title: 'Website Bank Sampah',
-    subtitle: 'A digital waste bank platform for community-based recycling and savings.',
+    subtitle: 'A digital waste bank platform with AI-powered waste detection for community-based recycling and savings.',
     description:
-      'A community-oriented web platform that digitizes the waste bank workflow — from recording resident waste deposits to managing digital savings balances. The system enables transparent tracking of recycled waste volumes, automatic balance calculations based on waste type and weight, and provides analytics dashboards for community leaders to monitor environmental impact and member participation.',
-    image: '/project-website-bank-sampah-1.svg',
+      'A community-oriented web platform that digitizes the waste bank workflow with AI-powered waste detection. The system integrates Roboflow AI to automatically classify waste types from photos, enabling faster and more accurate deposit processing. Features include digital savings balance tracking, automatic price calculation based on waste type and weight, and analytics dashboards for monitoring environmental impact and community participation.',
+    image: '/project-website-bank-sampah-1.png',
     role: 'Full Stack Developer',
     year: '2023',
     client: 'Community Organization',
     gallery: [
-      '/project-website-bank-sampah-1.svg',
-      '/project-website-bank-sampah-2.svg',
-      '/project-website-bank-sampah-3.svg',
+      '/project-website-bank-sampah.png',
+      '/project-website-bank-sampah-2.png',
+      '/project-website-bank-sampah-3.png',
     ],
-    demoUrl: '#',
+    demoUrl: '/contact',
     sourceUrl: '#',
     challenge:
-      'The community waste bank operated entirely on paper-based recording. Residents brought recyclable waste, staff manually weighed and categorized items, and balances were calculated by hand in physical notebooks. This led to frequent calculation errors, disputes about member balances, lack of historical data for environmental reporting, and zero visibility into recycling impact over time.\n\nThe organization needed a transparent, digital-first system that could automate balance calculations, maintain accurate records, and generate reports that demonstrate the community\'s environmental contribution.',
+      'The community waste bank relied on paper-based recording and manual waste sorting, leading to frequent calculation errors, disputes about member balances, and inaccurate waste categorization. Staff struggled to identify and separate different types of recyclable materials quickly, causing delays at deposit counters and reducing overall throughput. There was no automated way to verify waste types, resulting in misclassification that affected pricing accuracy and recycling efficiency.\n\nThe organization needed a transparent, digital-first system that automates waste identification using AI technology, streamlines the deposit-to-balance workflow, and provides accurate environmental impact reporting.',
     solution:
-      'I built a web-based waste bank management platform using Laravel (PHP) for robust backend logic and Vue.js for a reactive, user-friendly interface. The system automates the entire deposit-to-balance workflow: staff input waste type and weight, the system calculates the balance credit instantly, and members can view their savings history. Analytics dashboards track total recycled volume, community participation rates, and environmental impact metrics.',
+      'I developed a web-based waste bank management platform using Flask (Python) for backend logic with PostgreSQL for reliable data storage, and Tailwind CSS with Jinja2 for a responsive, server-rendered interface. The system integrates Roboflow AI detector for automatic waste classification — users simply upload a photo of waste items, and the AI identifies the waste type (plastic, paper, metal, organic, etc.) with high accuracy. This eliminates manual categorization errors and speeds up the deposit process. Staff confirm the AI classification, input weight, and the system instantly calculates the member\'s balance credit. Analytics dashboards track total recycled volume, community participation, and environmental impact metrics.',
     coreFeatures: [
       {
+        title: 'AI Waste Detection',
+        description: 'Roboflow-powered AI model that automatically identifies and classifies waste types (plastic, paper, metal, organic, glass) from uploaded photos — eliminating manual sorting errors and speeding up the deposit process.',
+      },
+      {
         title: 'Waste Deposit Recording',
-        description: 'Digital input of waste weight by type (organic, plastic, paper, metal, etc.) with automatic price-per-kg calculation based on current market rates.',
+        description: 'Digital input of waste weight by type with automatic price-per-kg calculation based on current market rates, confirmed by AI classification results.',
       },
       {
         title: 'Digital Savings Wallet',
@@ -229,13 +233,19 @@ async def create_order(
       { value: '1,000+', label: 'ACTIVE MEMBERS' },
       { value: '100%', label: 'DATA TRANSPARENCY' },
     ],
-    tags: ['Vue.js', 'PHP', 'Laravel', 'MySQL'],
+    tags: ['Python', 'Flask', 'Tailwind CSS', 'PostgreSQL', 'Jinja2', 'Roboflow AI'],
     codeSnippet: {
-      filename: 'DepositController.php',
-      code: `public function store(DepositRequest $request) {
-    $deposit = Deposit::createTransaction($request->validated());
-    return response()->json($deposit, 201);
-}`
+      filename: 'detector.py',
+      code: `from roboflow import Roboflow
+
+rf = Roboflow(api_key="YOUR_API_KEY")
+model = rf.workspace().project("waste-detection").version(1).model
+
+def classify_waste(image_path):
+    prediction = model.predict(image_path).json()
+    waste_type = prediction["predictions"][0]["class"]
+    confidence = prediction["predictions"][0]["confidence"]
+    return {"type": waste_type, "confidence": confidence}`
     }
   },
   {
