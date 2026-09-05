@@ -190,7 +190,7 @@ async def create_order(
   {
     id: 'website-bank-sampah',
     projectNumber: 'PROJECT_04',
-    category: 'Community Waste Management',
+    category: 'Bank Sampah & Recycling Platform',
     title: 'Website Bank Sampah',
     subtitle: 'A digital waste bank platform with AI-powered waste detection for community-based recycling and savings.',
     description:
