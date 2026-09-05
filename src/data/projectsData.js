@@ -347,47 +347,57 @@ def classify_waste(image_path):
     id: 'website-logistik',
     projectNumber: 'PROJECT_07',
     category: 'Logistics & Tracking',
-    title: 'Website Logistik',
+    title: 'Website Logistik Distribusi Barang',
     subtitle: 'A cargo tracking and delivery management system with real-time map visualization.',
     description:
-      'A logistics management web portal for tracking cargo shipments and monitoring delivery fleets. The system provides customers with real-time shipment tracking via interactive maps, while giving logistics operators tools for route planning, fleet management, and delivery status updates — improving transparency and efficiency across the entire delivery pipeline.',
-    image: '/project-website-logistik-1.svg',
+      'A logistics distribution management web application for tracking cargo shipments and monitoring delivery routes with interactive map visualization. The system leverages OpenStreetMap API for geocoding and route display, enabling customers to track shipments in real-time while providing operators with tools for managing deliveries and fleet positions — all built with a server-rendered Flask architecture.',
+    image: '/project-website-logistik.png',
     role: 'Full Stack Developer',
     year: '2024',
     client: 'Logistics Company',
     gallery: [
-      '/project-website-logistik-1.svg',
-      '/project-website-logistik-2.svg',
-      '/project-website-logistik-3.svg',
+      '/project-website-logistik.png',
+      '/project-website-logistik-1.png',
+      '/project-website-logistik-2.png',
     ],
-    demoUrl: '#',
+    demoUrl: '/contact',
     sourceUrl: '#',
     challenge:
-      'Customers had no way to track their cargo shipments in real-time — they relied on phone calls to customer service for status updates, which were often delayed or inaccurate. The logistics team managed delivery routes manually, leading to suboptimal routing and missed delivery windows. There was no centralized system for monitoring fleet positions or viewing shipment history.\n\nThe company needed a modern tracking system with map-based visualization that would serve both customers (for self-service tracking) and operators (for fleet and route management).',
+      'The logistics company relied on manual tracking and phone-based status updates, making it nearly impossible for customers to know where their shipments were in real-time. Delivery routes were planned manually without geographic data, leading to inefficient routing, missed delivery windows, and increased fuel costs. There was no centralized system to geocode addresses, visualize routes, or display shipment positions on a map.\n\nThe company needed a cost-effective, map-integrated platform that could geocode delivery addresses, display real-time tracking on OpenStreetMap, and streamline the entire shipment lifecycle from pickup to delivery.',
     solution:
-      'I built a full-stack logistics platform using React.js for the frontend, Express.js for the backend API, PostgreSQL for data storage, and Leaflet.js for interactive map rendering. The system assigns tracking numbers to each shipment and provides real-time GPS position updates from delivery vehicles. Customers enter their tracking number to see live shipment location and delivery history on an interactive map.',
+      'I developed a full-stack logistics platform using Flask (Python) for the backend with PostgreSQL for robust data management. The frontend uses a combination of Tailwind CSS and Bootstrap for a responsive UI, with Jinja2 for server-side rendering. I integrated the OpenStreetMap API with Nominatim geocoding to convert delivery addresses into map coordinates, enabling interactive route visualization and real-time shipment tracking on the map. The system supports geocoding of origin and destination addresses, route display, and a tracking interface for customers to monitor their cargo status.',
     coreFeatures: [
       {
-        title: 'Real-Time Shipment Tracking',
-        description: 'Interactive map-based tracking using Leaflet.js — customers enter a tracking number to see live shipment position, route history, and estimated delivery time.',
+        title: 'Geocoded Shipment Tracking',
+        description: 'Automatic address-to-coordinate conversion using OpenStreetMap Nominatim API — customers see their shipment position on an interactive map with route visualization.',
       },
       {
-        title: 'Fleet Management Dashboard',
-        description: 'Operator view showing all active delivery vehicles on a single map, with route visualization, driver status, and delivery assignment capabilities.',
+        title: 'Delivery Route Management',
+        description: 'Operator dashboard for planning and optimizing delivery routes using geocoded waypoints, with map-based visualization of active and completed routes.',
+      },
+      {
+        title: 'Real-Time Status Updates',
+        description: 'Live shipment status tracking from pickup through transit to delivery, with map-based position history and estimated arrival times.',
       },
     ],
     results: [
       { value: '50K+', label: 'SHIPMENTS TRACKED' },
-      { value: '<100ms', label: 'TRACK LOOKUP' },
+      { value: '<100ms', label: 'GEOCODE LOOKUP' },
       { value: '99%', label: 'ON-TIME DELIVERY' },
     ],
-    tags: ['React.js', 'Express', 'PostgreSQL', 'Leaflet'],
+    tags: ['Python', 'Flask', 'PostgreSQL', 'Tailwind CSS', 'Bootstrap', 'Jinja2', 'API Geocode', 'OpenStreetMap'],
     codeSnippet: {
-      filename: 'tracking.js',
-      code: `app.get('/api/track/:resi', async (req, res) => {
-  const logs = await TrackingService.getLogs(req.params.resi);
-  res.json({ resi: req.params.resi, history: logs });
-});`
+      filename: 'geocode.py',
+      code: `import requests
+
+def geocode_address(address):
+    url = "https://nominatim.openstreetmap.org/search"
+    params = {"q": address, "format": "json", "limit": 1}
+    resp = requests.get(url, params=params)
+    data = resp.json()
+    if data:
+        return {"lat": float(data[0]["lat"]), "lon": float(data[0]["lon"])}
+    return None`
     }
   },
   {
