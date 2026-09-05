@@ -353,8 +353,6 @@ def classify_waste(image_path):
       'A logistics distribution management web application for tracking cargo shipments and monitoring delivery routes with interactive map visualization. The system leverages OpenStreetMap API for geocoding and route display, enabling customers to track shipments in real-time while providing operators with tools for managing deliveries and fleet positions — all built with a server-rendered Flask architecture.',
     image: '/project-website-logistik.png',
     role: 'Full Stack Developer',
-    year: '2024',
-    client: 'Logistics Company',
     gallery: [
       '/project-website-logistik.png',
       '/project-website-logistik-1.png',
