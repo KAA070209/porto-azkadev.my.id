@@ -166,7 +166,7 @@ async def create_order(
       { value: '300ms', label: 'CHECKOUT' },
       { value: '24/7', label: 'AVAILABILITY' }
     ],
-    tags: ['React.js', 'Node.js', 'Express', 'MySQL'],
+    tags: ['Python', 'Flask','PostgreSQL', 'Bootstrap' , 'Jinja2', 'Tailwind CSS'],
     codeSnippet: {
       filename: 'stock.controller.js',
       code: `exports.updateStock = async (req, res) => {
