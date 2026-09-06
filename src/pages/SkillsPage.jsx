@@ -1,3 +1,4 @@
+import SEO from '../seo';
 import './SkillsPage.css';
 
 const skillCategories = [
@@ -228,6 +229,11 @@ const skillCategories = [
 export default function SkillsPage() {
   return (
     <section className="skills-page">
+      <SEO
+        title="Skills"
+        path="/skills"
+        description="Technologies and tools Muhammad Azka uses: React, Next.js, TypeScript, Flutter, Node.js, Python, FastAPI, Laravel, PostgreSQL, MySQL, Docker, and more."
+      />
       <div className="container">
         <div className="skills-header animate-on-scroll">
           <h1 className="skills-title">

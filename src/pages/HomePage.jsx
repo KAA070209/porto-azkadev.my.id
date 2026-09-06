@@ -1,3 +1,4 @@
+import SEO from '../seo';
 import Hero from '../components/Hero/Hero';
 import TechStack from '../components/TechStack/TechStack';
 import Projects from '../components/Projects/Projects';
@@ -9,6 +10,10 @@ import HowIWork from '../components/HowIWork/HowIWork';
 export default function HomePage() {
   return (
     <>
+      <SEO
+        title="Software Developer Portfolio"
+        description="Muhammad Azka — software developer specializing in frontend, backend, mobile, and DevOps. Building fast, responsive websites, web apps, and mobile apps."
+      />
       <Hero />
       <TechStack />
       <Projects />
