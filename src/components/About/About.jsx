@@ -7,6 +7,8 @@ const tags = [
   'Full Stack Development',
   'API Development',
   'SEO Optimization',
+  'Search Engine Marketing (SEM)',
+  'UI/UX Designer',
 ];
 
 export default function About() {
