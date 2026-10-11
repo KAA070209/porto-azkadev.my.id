@@ -5,6 +5,7 @@ import Projects from '../components/Projects/Projects';
 import Expertise from '../components/Expertise/Expertise';
 import Services from '../components/Services/Services';
 import Journey from '../components/Journey/Journey';
+import Certificate from '../components/Certificate/Certificate';
 import HowIWork from '../components/HowIWork/HowIWork';
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Expertise />
       <Services />
       <Journey />
+      <Certificate />
       <HowIWork />
     </>
   );
