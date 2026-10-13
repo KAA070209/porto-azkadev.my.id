@@ -14,6 +14,11 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
+            I'm{' '}
+            <span className="hero-highlight">
+              Muhammad Azka Sa'adi Nabhan
+            </span>
+            <br />
             Turning your ideas into{' '}
             <span className="hero-highlight">
               digital products.

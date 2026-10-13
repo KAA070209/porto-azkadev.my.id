@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'About', to: '/about', hash: null },
   { label: 'Skills', to: '/skills', hash: null },
   { label: 'Projects', to: '/projects', hash: null },
-  { label: 'Experience', to: '/', hash: '#journey' },
+  { label: 'Experience', to: '/', hash: '#experience' },
   { label: 'Contact', to: '/contact', hash: null },
 ];
 
@@ -55,7 +55,7 @@ export default function Navbar() {
       setActiveHash('');
       return;
     }
-    const ids = ['#expertise', '#services', '#journey', '#how-i-work'];
+    const ids = ['#expertise', '#services', '#experience', '#certificate', '#how-i-work'];
     const sections = ids
       .map((id) => document.querySelector(id))
       .filter(Boolean);

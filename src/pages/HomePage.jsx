@@ -4,7 +4,7 @@ import TechStack from '../components/TechStack/TechStack';
 import Projects from '../components/Projects/Projects';
 import Expertise from '../components/Expertise/Expertise';
 import Services from '../components/Services/Services';
-import Journey from '../components/Journey/Journey';
+import Experience from '../components/Experience/Experience';
 import Certificate from '../components/Certificate/Certificate';
 import HowIWork from '../components/HowIWork/HowIWork';
 
@@ -12,15 +12,15 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Software Developer Portfolio"
-        description="Muhammad Azka — software developer specializing in frontend, backend, mobile, and DevOps. Building fast, responsive websites, web apps, and mobile apps."
+        title="Muhammad Azka Sa'adi Nabhan — Software Developer Portfolio"
+        description="Muhammad Azka Sa'adi Nabhan — software developer specializing in frontend, backend, mobile, and DevOps. Building fast, responsive websites, web apps, and mobile apps."
       />
       <Hero />
       <TechStack />
       <Projects />
       <Expertise />
       <Services />
-      <Journey />
+      <Experience />
       <Certificate />
       <HowIWork />
     </>
