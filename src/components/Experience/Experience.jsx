@@ -9,6 +9,23 @@ const tabs = [
 
 const experienceData = {
   work: [
+        {
+      period: 'Oktober 2026 - Present',
+      title: 'Frontend Developer - Internship',
+      place: 'Auspify Technologies',
+      logo: '/work/aus-company-logo.png',
+      images: ['/work/company-aus.jpg', '/work/company-aus.jpeg'],
+      description:
+        'Developing modern, responsive, and user-friendly web interfaces using React.js. Implementing reusable UI components, integrating REST APIs, and ensuring consistent user experiences across different screen sizes. Collaborating on frontend development tasks, testing application functionality, and fixing bugs to improve performance, usability, and code quality.',
+      tags: [
+  'React.js',
+  'JavaScript',
+  'REST API',
+  'Responsive Design',
+  'HTML',
+  'CSS',
+]
+    },
     {
       period: 'Juli 2026 - Oktober 2026',
       title: 'Frontend Developer - Internship',
