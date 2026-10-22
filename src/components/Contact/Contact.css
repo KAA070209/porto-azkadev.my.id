@@ -1,4 +1,4 @@
-/* ======= Contact / Initiate Connect Section ======= */
+﻿/* ======= Contact / Initiate Connect Section ======= */
 .contact {
   padding: var(--section-padding);
   background: var(--color-bg-primary);
@@ -13,7 +13,7 @@
 }
 
 /* ---- Left column: Info ---- */
-.contact-info h2 {
+.contact-info h1 {
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 800;
@@ -23,7 +23,7 @@
   line-height: 1.15;
 }
 
-.contact-info h2 span {
+.contact-info h1 span {
   background: var(--color-accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -227,7 +227,7 @@
 }
 
 @media (max-width: 480px) {
-  .contact-info h2 {
+  .contact-info h1 {
     font-size: 1.6rem;
     letter-spacing: -0.5px;
   }

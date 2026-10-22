@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import SEO from '../seo';
+import { getSeoProps } from '../routeMeta';
 import { projectsData } from '../data/projectsData';
 import './AllProjects.css';
 
@@ -8,11 +9,7 @@ export default function ProjectsPage() {
 
   return (
     <section className="all-projects">
-      <SEO
-        title="Projects"
-        path="/projects"
-        description="Explore Muhammad Azka's portfolio of software projects — e-commerce platforms, pharmacy systems, waste bank apps, logistics tracking, mobile dashboards, and digital galleries."
-      />
+      <SEO {...getSeoProps('/projects')} />
       <div className="container">
         <div className="all-projects-header">
           <span className="all-projects-label">My Work</span>

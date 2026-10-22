@@ -1,4 +1,5 @@
 import SEO from '../seo';
+import { getSeoProps } from '../routeMeta';
 import Hero from '../components/Hero/Hero';
 import TechStack from '../components/TechStack/TechStack';
 import Projects from '../components/Projects/Projects';
@@ -11,10 +12,7 @@ import HowIWork from '../components/HowIWork/HowIWork';
 export default function HomePage() {
   return (
     <>
-      <SEO
-        title="Muhammad Azka Sa'adi Nabhan — Software Developer Portfolio"
-        description="Muhammad Azka Sa'adi Nabhan — software developer specializing in frontend, backend, mobile, and DevOps. Building fast, responsive websites, web apps, and mobile apps."
-      />
+      <SEO {...getSeoProps('/')} />
       <Hero />
       <TechStack />
       <Projects />

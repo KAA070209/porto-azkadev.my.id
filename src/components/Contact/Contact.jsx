@@ -70,9 +70,9 @@ export default function Contact() {
         <div className="contact-layout">
           {/* Left: Info */}
           <div className="contact-info animate-on-scroll">
-            <h2>
+            <h1>
               Initiate <span>Connect</span>
-            </h2>
+            </h1>
             <p>
               Currently accepting select architectural and high-end UI engineering
               contracts. Reach out to discuss project parameters.

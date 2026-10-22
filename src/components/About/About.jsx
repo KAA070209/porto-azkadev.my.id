@@ -17,10 +17,10 @@ export default function About() {
       <div className="container">
         {/* Hero Header */}
         <div className="about-hero animate-on-scroll">
-          <h2 className="about-hero-title">
+          <h1 className="about-hero-title">
             <span className="line-white">Software Developer.</span>
             <span className="line-gradient">Problem Solver.</span>
-          </h2>
+          </h1>
 
           <div className="about-hero-divider"></div>
         </div>

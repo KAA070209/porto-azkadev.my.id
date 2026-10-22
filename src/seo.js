@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-
-const SITE_URL = 'https://porto.azkadev.my.id';
-const DEFAULT_IMAGE = `${SITE_URL}/profile.png`;
+import { SITE_URL, DEFAULT_IMAGE, DEFAULT_TITLE, buildTitle } from './routeMeta';
 
 function setMeta(attr, attrName, name, content) {
   if (!content) return;
@@ -48,8 +46,8 @@ export default function SEO({
   jsonLd,
 }) {
   useEffect(() => {
-    const fullTitle = title ? `${title} | Muhammad Azka` : 'Muhammad Azka — Software Developer';
-    const url = `${SITE_URL}${path}`;
+    const fullTitle = buildTitle(title) || DEFAULT_TITLE;
+    const url = path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`;
 
     document.title = fullTitle;
     setMeta('name', 'description', 'content', description);

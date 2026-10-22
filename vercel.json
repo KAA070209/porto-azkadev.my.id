@@ -1,6 +1,13 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" },
-    { "source": "/google031f56380b879fb6.html", "destination": "/google031f56380b879fb6.html" }
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/projects", "destination": "/projects.html" },
+    { "source": "/skills", "destination": "/skills.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/projects/:id", "destination": "/projects/:id.html" },
+    { "source": "/((?!google031f56380b879fb6\\.html).*)", "destination": "/index.html" }
   ]
 }

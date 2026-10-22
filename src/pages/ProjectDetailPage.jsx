@@ -1,6 +1,7 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import SEO from '../seo';
+import { getSeoProps } from '../routeMeta';
 import { getProjectById } from '../data/projectsData';
 import './ProjectDetailPage.css';
 
@@ -8,23 +9,8 @@ export default function ProjectDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = getProjectById(id);
+  const seo = getSeoProps(`/projects/${project.id}`);
   const [previewImage, setPreviewImage] = useState(null);
-
-  const jsonLd = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'CreativeWork',
-      name: project.title,
-      url: `https://porto.azkadev.my.id/projects/${project.id}`,
-      image: `https://porto.azkadev.my.id${project.image}`,
-      description: project.subtitle || project.description,
-      author: { '@type': 'Person', name: "Muhammad Azka Sa'adi Nabhan" },
-      ...(project.year ? { datePublished: project.year } : {}),
-      ...(project.tags ? { keywords: project.tags.join(', ') } : {}),
-      ...(project.role ? { about: project.role } : {}),
-    }),
-    [project]
-  );
 
   const handleDiscussClick = () => {
     navigate('/contact');
@@ -40,14 +26,7 @@ export default function ProjectDetailPage() {
 
   return (
     <div className="project-detail-page">
-      <SEO
-        title={project.title}
-        path={`/projects/${project.id}`}
-        description={project.subtitle || project.description}
-        image={`https://porto.azkadev.my.id${project.image}`}
-        type="article"
-        jsonLd={jsonLd}
-      />
+      <SEO {...seo} />
       <div className="container">
         {/* Back Button */}
         <div className="project-detail-nav animate-on-scroll visible">
